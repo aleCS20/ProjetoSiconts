@@ -12,14 +12,14 @@
         <title>@yield('title')</title>
     </head>
     <body>
-        <nav class="blue" role="navigation">
+        <nav class="indigo" role="navigation">
             <div class="nav-wrapper container">
-                <a id="logo-container" href="{{route('home')}}" class="brand-logo light">
+                <a id="logo-container" href="{{route('home')}}" class="brand-logo">
                     <img src="{{asset('logo/Siconts_logo.jpg')}}" alt="_blank" width="85px">
                 </a>
 
                 {{-- menu de desktop inicial --}}
-                <ul class="right hide-on-med-and-down" id="nav-mobile" class="sidenav" >
+                <ul class="right hide-on-med-and-down">
 
                     {{-- quando não estiver logado no sistema --}}
                     @guest
@@ -32,6 +32,24 @@
                     @endauth
 
                 </ul>
+                {{--  menu responsivo para mobile e dispositivos --}}
+                <ul id="nav-mobile" class="sidenav" >
+
+                    {{-- quando não estiver logado no sistema --}}
+                    @guest
+                    <li><a href="{{route('login')}}">Login</a></li>
+                    <li><a href="{{route('register')}}">Registre-se</a></li>
+                    @endguest
+                    {{-- quando estiver logado no sistema --}}
+                    @auth
+                    <li><a href="{{route('dashboard')}}">Dashboard</a></li>
+                    @endauth
+                </ul>
+
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+
             </div>
         </nav>
 
@@ -77,7 +95,7 @@
             </div>
         </div>
 
-        <footer class="page-footer blue">
+        <footer class="page-footer indigo">
             <div class="footer-copyright">
                 <div class="container">
                     Projeto: <a class="black-text text-lighten-3" href="https://github.com/aleCS20/ProjetoSiconts" target="_blank">Github</a>
@@ -88,9 +106,8 @@
         @yield('content')
 
         {{-- script JQuery --}}
-        <script>
-            <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
-            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+            crossorigin="anonymous">
         </script>
 
         <!-- Compiled and minified JavaScript-->
