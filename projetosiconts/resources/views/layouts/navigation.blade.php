@@ -35,7 +35,7 @@
                             </x-slot>
 
                             <x-slot name="content">
-                                <x-dropdown-link :href="route('profile.edit')">
+                                <x-dropdown-link :href="route('projeto')">
                                     {{ __('Novo') }}
                                 </x-dropdown-link>
 
@@ -65,7 +65,7 @@
                             </x-slot>
 
                             <x-slot name="content">
-                                <x-dropdown-link :href="route('profile.edit')">
+                                <x-dropdown-link :href="route('time')">
                                     {{ __('Novo') }}
                                 </x-dropdown-link>
 
@@ -95,7 +95,7 @@
                             </x-slot>
 
                             <x-slot name="content">
-                                <x-dropdown-link :href="route('profile.edit')">
+                                <x-dropdown-link :href="route('sprint')">
                                     {{ __('Novo') }}
                                 </x-dropdown-link>
 
@@ -125,7 +125,7 @@
                             </x-slot>
 
                             <x-slot name="content">
-                                <x-dropdown-link :href="route('profile.edit')">
+                                <x-dropdown-link :href="route('item')">
                                     {{ __('Novo') }}
                                 </x-dropdown-link>
 

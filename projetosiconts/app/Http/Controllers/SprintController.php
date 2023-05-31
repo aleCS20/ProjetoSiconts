@@ -20,6 +20,7 @@ class SprintController extends Controller
     public function create()
     {
         //
+        return view('site.sprint');
     }
 
     /**
@@ -27,7 +28,20 @@ class SprintController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //salvando dados do formulário no banco de dados
+        $sprint = new Sprint();
+
+        //..pega os dados vindos do form e seta no model
+        $sprint->nome = $request->input('nome');
+        $sprint->duracao = $request->input('duracao');
+        $sprint->numItens = $request->input('numItens');
+        $sprint->status = $request->input('status');
+
+        //..persiste o model na base de dados
+        $sprint->save();
+
+        //retorna a view dashboard
+        return redirect()->route('dashboard');
     }
 
     /**

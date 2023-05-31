@@ -20,6 +20,7 @@ class ItemController extends Controller
     public function create()
     {
         //
+        return view('site.item');
     }
 
     /**
@@ -27,7 +28,18 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //salvando dados do formulário no banco de dados
+        $item = new Item();
+
+        //..pega os dados vindos do form e seta no model
+        $item->titulo = $request->input('titulo');
+        $item->descricao = $request->input('descricao');
+
+        //..persiste o model na base de dados
+        $item->save();
+
+        //retornar a view dashboard
+        return redirect()->route('dashboard');
     }
 
     /**

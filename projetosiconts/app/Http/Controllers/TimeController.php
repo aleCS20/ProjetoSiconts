@@ -20,6 +20,7 @@ class TimeController extends Controller
     public function create()
     {
         //
+        return view('site.time');
     }
 
     /**
@@ -27,7 +28,18 @@ class TimeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //salvando dados do formulário no banco de dados
+        $time = new Time();
+
+        //..pega os dados vindos do form e seta no model
+        $time->nomeTime = $request->input('nomeTime');
+        $time->numIntegrantes = $request->input('numIntegrantes');
+
+        //..persiste o model na base de dados
+        $time->save();
+
+        //retornar a view dashboard
+        return redirect()->route('dashboard');
     }
 
     /**

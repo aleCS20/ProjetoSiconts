@@ -20,6 +20,7 @@ class ProjetoController extends Controller
     public function create()
     {
         //
+        return view('site.projeto');
     }
 
     /**
@@ -27,7 +28,21 @@ class ProjetoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //salvando dados do formulário no banco de dados
+        $projeto = new Projeto();
+
+        //..pega os dados vindos do form e seta no model
+        $projeto->titulo = $request->input('titulo');
+        $projeto->duracao = $request->input('duracao');
+        $projeto->descricao = $request->input('descricao');
+        $projeto->numIntegrantes = $request->input('numIntegrantes');
+        $projeto->andamento = $request->input('andamento');
+
+        //..persiste o model na base de dados
+        $projeto->save();
+
+        //retorna a view dashboard
+        return redirect()->route('dashboard');
     }
 
     /**
