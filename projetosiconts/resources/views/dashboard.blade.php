@@ -10,53 +10,76 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <!-- {{ __("Conteúdo do Quadro Scrum!") }} -->
+
                     <!-- inicio do quadro kanban -->
                     <div class="boards">
                         <div class="board">
-                            <h2>ITENS</h2>
+                            <h2 class="color-font">ITENS</h2>
                             <div class="dropZone" id="item">
-                                <!-- Cartões de tarefas -->
-                                <div class="card" draggable="true">
-                                    <div class="status item"></div>
-                                    <div class="content">Está é uma tarefa em espera! (Experimente adicionar outras tarefas logo abaixo.)</div>
+                                <div>
+                                    <!-- botão para o modal -->
+                                    <button type="button" id="button-add-item">
+                                            Adicionar Item</span>
+                                    </button>
                                 </div>
+
+                                <!-- Cartões de tarefas -->
+                                <!--<div class="card" draggable="false">
+                                    <div class="status item"></div>
+                                    <div class="content">
+
+                                    </div>
+                                </div>-->
                             </div>
                         </div>
                         <!-- Quadro de tarefas para fazer -->
                         <div class="board">
-                            <h2>A FAZER</h2>
+                            <h2 class="color-font">A FAZER</h2>
                             <div class="dropZone" id="todo">
-                                <!-- Cartões de tarefas -->
-                                <div class="card" draggable="true">
-                                    <div class="status todo"></div>
-                                    <div class="content">Está é uma tarefa em espera! (Experimente adicionar outras tarefas logo abaixo.)</div>
+                                <div>
+                                    <button id="button-add-tarefa">Adicionar Tarefa</span>
                                 </div>
+                                <!-- Cartões de tarefas -->
+                                <!--<div class="card" draggable="true">
+                                    <div class="status todo"></div>
+                                    <div class="content">
+
+                                    </div>
+                                </div>-->
                             </div>
                         </div>
                         <!-- Quadro de tarefas sendo feitas -->
                         <div class="board">
-                            <h2>FAZENDO</h2>
+                            <h2 class="color-font">FAZENDO</h2>
                             <div class="dropZone" id="doing">
-                                <div class="card" draggable="true">
+                                <!--<div class="card" draggable="true">
                                     <div class="status doing"></div>
-                                    <div class="content">Está é uma tarefa sendo feita! (Experimente arrasta-lá para alguma outra coluna.)</div>
-                                </div>
+                                    <div class="content">
+
+                                    </div>
+                                </div>-->
                             </div>
                         </div>
                         <!-- Quadro de tarefas já feitas -->
                         <div class="board">
-                            <h2>PRONTO!</h2>
+                            <h2 class="color-font">PRONTO!</h2>
                             <div class="dropZone" id="done">
-                                <div class="card" draggable="true">
+                                <!--<div class="card" draggable="true">
                                     <div class="status done"></div>
-                                    <div class="content">Está é uma tarefa concluída! (Experimente remove-la do quadro arrastando até a lixeira.)</div>
-                                </div>
+                                    <div class="content">
+
+                                    </div>
+                                </div>-->
                             </div>
                         </div>
                     </div>
                     <!-- fim do quadro kanban -->
+
                 </div>
             </div>
         </div>
     </div>
+
+
+
 </x-app-layout>

@@ -136,7 +136,7 @@ body{
   justify-content: space-between;
 }
 
-.task h2{
+.color-font{
   color: #fd951fcc;
   text-align: center;
   padding-bottom:5px;
@@ -167,8 +167,8 @@ body{
   cursor: pointer;
 }
 
-.task button img{
-  height: 30px;
+.dropZone button img{
+    height: 20px;
 }
 
 .info{
@@ -219,6 +219,32 @@ body{
 
 .garbage .dropZone{
   height: 100%;
+}
+
+#button-add-item {
+    margin: 0.2rem 0rem 0.1rem 0rem;
+    background-color: blue;
+    border-radius: 2px;
+    width: 100%;
+    border: 1px solid black;
+    padding: 0.5rem 2.7rem;
+    border-radius: 0.3rem;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+#button-add-tarefa {
+    margin: 0.2rem 0rem 0.1rem 0rem;
+    background-color: red;
+    border-radius: 2px;
+    width: 100%;
+    border: 1px solid black;
+    padding: 0.5rem 2.7rem;
+    border-radius: 0.3rem;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
 }
 
 @media all and (max-width: 600px){

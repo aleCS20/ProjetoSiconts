@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'SICONTS'),
+    'name' => env('APP_NAME', 'Sistema Siconts'),
 
     /*
     |--------------------------------------------------------------------------
