@@ -3,6 +3,12 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NavigationController;
+use App\Http\Controllers\ProjetoController;
+use App\Http\Controllers\TimeController;
+use App\Http\Controllers\SprintController;
+use App\Http\Controllers\ItemController;
+use App\Http\Controllers\TarefaController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes - rotas web do sistema
@@ -18,9 +24,10 @@ Route::get('/',[NavigationController::class,'home'])->name('home');
 
 /* Rotas para as views dos formulários de cadastros */
 Route::resource("/projeto", ProjetoController::class);
-Route::resource("/time", ProjetoController::class);
-Route::resource("/sprint", ProjetoController::class);
-Route::resource("/item", ProjetoController::class);
+Route::resource("/time", TimeController::class);
+Route::resource("/sprint", SprintController::class);
+Route::resource("/item", ItemController::class);
+Route::resource("/tarefa", TarefaController::class);
 
 /*Route::get('/', function () {
     return view('welcome');
@@ -53,6 +60,11 @@ Route::get('item', function () {
     return view('item');
 })->middleware(['auth', 'verified'])->name('item');
 
+Route::get('tarefa', function () {
+    return view('tarefa');
+})->middleware(['auth', 'verified'])->name('tarefa');
+
+
 /* Rotas para as views dos formulários de cadastros */
 Route::get('/projeto', function () {
     return view('site.projeto');
@@ -69,5 +81,9 @@ Route::get('/sprint', function () {
 Route::get('/item', function () {
     return view('site.item');
 })->name('item');
+
+Route::get('/tarefa', function () {
+    return view('site.tarefa');
+})->name('tarefa');
 
 require __DIR__.'/auth.php';

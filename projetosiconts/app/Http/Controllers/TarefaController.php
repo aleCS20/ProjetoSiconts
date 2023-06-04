@@ -20,6 +20,7 @@ class TarefaController extends Controller
     public function create()
     {
         //
+        return view('site.tarefa');
     }
 
     /**
@@ -27,7 +28,21 @@ class TarefaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //salvando dados do formulário no banco de dados
+        $tarefa = new Tarefa();
+
+        //..pega os dados vindos do form e seta no model
+        $tarefa->descricao = $request->input('descricao');
+        $tarefa->status = $request->input('status');
+        $tarefa->dataInicio = $request->input('dataInicio');
+        $tarefa->dataTermino = $request->input('dataTermino');
+        $tarefa->comentario = $request->input('comentario');
+
+        //..persiste o model na base de dados
+        $tarefa->save();
+
+        //retornar a view dashboard
+        return redirect()->route('dashboard');
     }
 
     /**

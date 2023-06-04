@@ -18,9 +18,11 @@
                             <div class="dropZone" id="item">
                                 <div>
                                     <!-- botão para o modal -->
-                                    <button type="button" id="button-add-item">
+                                    <a href="{{route('item')}}">
+                                        <button type="button" id="button-add-item">
                                             Adicionar Item</span>
-                                    </button>
+                                        </button>
+                                    </a>
                                 </div>
 
                                 <!-- Cartões de tarefas -->
@@ -37,7 +39,11 @@
                             <h2 class="color-font">A FAZER</h2>
                             <div class="dropZone" id="todo">
                                 <div>
-                                    <button id="button-add-tarefa">Adicionar Tarefa</span>
+                                    <a href="{{route('tarefa')}}">
+                                        <button id="button-add-tarefa">
+                                            Adicionar Tarefa</span>
+                                        </button>
+                                    </a>
                                 </div>
                                 <!-- Cartões de tarefas -->
                                 <!--<div class="card" draggable="true">
