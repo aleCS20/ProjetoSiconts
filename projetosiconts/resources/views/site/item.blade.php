@@ -14,10 +14,10 @@
                         <!-- Nome da Sprint -->
                         <div class="mt-4">
                             <x-input-label for="nome">Nome da Sprint</x-input-label>
-                            <select name="nome" id="nome" class="bg-gray-50 border border-gray-300 text-gray-900
-                                text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
-                                dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black
-                                dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <select name="nome" id="nome" class="bg-gray-50 border border-gray-300 text-gray-900
+                                    text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
+                                    dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black
+                                    dark:focus:ring-blue-500 dark:focus:border-blue-500">
 
                                 </select>
 

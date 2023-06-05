@@ -34,8 +34,8 @@ class TarefaController extends Controller
         //..pega os dados vindos do form e seta no model
         $tarefa->descricao = $request->input('descricao');
         $tarefa->status = $request->input('status');
-        $tarefa->dataInicio = $request->input('dataInicio');
-        $tarefa->dataTermino = $request->input('dataTermino');
+        $tarefa->data_inicio = $request->input('data_inicio');
+        $tarefa->data_termino = $request->input('data_termino');
         $tarefa->comentario = $request->input('comentario');
 
         //..persiste o model na base de dados

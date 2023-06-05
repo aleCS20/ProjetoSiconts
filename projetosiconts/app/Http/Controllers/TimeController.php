@@ -32,8 +32,8 @@ class TimeController extends Controller
         $time = new Time();
 
         //..pega os dados vindos do form e seta no model
-        $time->nomeTime = $request->input('nomeTime');
-        $time->numIntegrantes = $request->input('numIntegrantes');
+        $time->nome_time = $request->input('nome_time');
+        $time->num_integrantes = $request->input('num_integrantes');
 
         //..persiste o model na base de dados
         $time->save();

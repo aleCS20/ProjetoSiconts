@@ -34,6 +34,7 @@ class ItemController extends Controller
         //..pega os dados vindos do form e seta no model
         $item->titulo = $request->input('titulo');
         $item->descricao = $request->input('descricao');
+        $item->nome_sprint = $request->input('nome_sprint');
 
         //..persiste o model na base de dados
         $item->save();

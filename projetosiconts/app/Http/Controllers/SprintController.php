@@ -34,7 +34,7 @@ class SprintController extends Controller
         //..pega os dados vindos do form e seta no model
         $sprint->nome = $request->input('nome');
         $sprint->duracao = $request->input('duracao');
-        $sprint->numItens = $request->input('numItens');
+        $sprint->num_itens = $request->input('num_itens');
         $sprint->status = $request->input('status');
 
         //..persiste o model na base de dados

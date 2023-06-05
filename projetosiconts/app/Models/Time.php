@@ -10,6 +10,6 @@ class Time extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nomeTime', 'numIntegrantes',
+        'nome_time', 'num_integrantes',
     ];
 }

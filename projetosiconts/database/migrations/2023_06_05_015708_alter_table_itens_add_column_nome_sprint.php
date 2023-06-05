@@ -11,11 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('itens', function (Blueprint $table) {
-            $table->id('id_item')->unique();
-            $table->string('titulo');
-            $table->string('descricao');
-            $table->timestamps();
+        Schema::table('itens', function (Blueprint $table) {
+            //
+            $table->string('nome_sprint');
         });
     }
 
@@ -24,6 +22,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('itens');
+        Schema::table('itens', function (Blueprint $table) {
+            //
+        });
     }
 };

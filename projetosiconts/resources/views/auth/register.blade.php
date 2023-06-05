@@ -58,11 +58,11 @@
 
         <!-- Digite o número de Telefone -->
         <div class="mt-4">
-            <x-input-label for="numTelefone" :value="__('Número de Telefone')"/>
-            <x-text-input class="form-control phone-ddd-mask" type="text" id="numTelefone"
-             name="numTelefone" :value="old('numTelefone')"
-             required autofocus autocomplete="numTelefone" placeholder="(00) 00000-0000" />
-            <x-input-error :messages="$errors->get('numTelefone')" class="mt-2" />
+            <x-input-label for="num_telefone" :value="__('Número de Telefone')"/>
+            <x-text-input class="form-control phone-ddd-mask" type="text" id="num_telefone"
+             name="num_telefone" :value="old('num_telefone')"
+             required autofocus autocomplete="num_telefone" placeholder="(00) 00000-0000" />
+            <x-input-error :messages="$errors->get('num_telefone')" class="mt-2" />
         </div>
 
         <div class="flex items-center justify-end mt-4">

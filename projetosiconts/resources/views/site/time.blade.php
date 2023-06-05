@@ -13,16 +13,16 @@
 
                         <!-- Nome do Time Scrum -->
                         <div class="mt-4">
-                            <x-input-label for="nomeTime" :value="__('Nome do Time')" />
-                            <x-text-input id="nomeTime" class="block mt-1 w-full" type="text" name="nomeTime" :value="old('nomeTime')"
-                            required autofocus autocomplete="nomeTime" />
-                            <x-input-error :messages="$errors->get('nomeTime')" class="mt-2" />
+                            <x-input-label for="nome_time" :value="__('Nome do Time')" />
+                            <x-text-input id="nome_time" class="block mt-1 w-full" type="text" name="nome_time" :value="old('nome_time')"
+                            required autofocus autocomplete="nome_time" />
+                            <x-input-error :messages="$errors->get('nome_time')" class="mt-2" />
                         </div>
 
                         <!-- Número de integrantes do projeto -->
                         <div class="mt-4">
-                            <x-input-label for="numIntegrantes">Quantidade de Integrantes</x-input-label>
-                            <select name="numIntegrantes" class="bg-gray-50 border border-gray-300 text-gray-900
+                            <x-input-label for="num_integrantes">Quantidade de Integrantes</x-input-label>
+                            <select name="num_integrantes" class="bg-gray-50 border border-gray-300 text-gray-900
                             text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
                             dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black
                             dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -37,7 +37,7 @@
                             <!--<x-input-label for="numIntegrantes" :value="__('Número de Integrantes')" />
                             <x-text-input id="numIntegrantes" class="block mt-1 w-full" type="text" name="numIntegrantes" :value="old('numIntegrantes')"
                             required autofocus autocomplete="numIntegrantes" />-->
-                            <x-input-error :messages="$errors->get('numIntegrantes')" class="mt-2" />
+                            <x-input-error :messages="$errors->get('num_integrantes')" class="mt-2" />
                         </div>
 
                         <div class="flex items-center justify-end mt-4">

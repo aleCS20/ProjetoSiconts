@@ -50,10 +50,10 @@
         </div>
 
         <div>
-            <x-input-label for="numTelefone" :value="__('Telefone')" />
-            <x-text-input id="numTelefone" name="numTelefone" type="text" class="mt-1 block w-full text-gray-900" :value="old('numTelefone', $user->numTelefone)"
-                required autofocus autocomplete="numTelefone" />
-            <x-input-error class="mt-2" :messages="$errors->get('numTelefone')" />
+            <x-input-label for="num_telefone" :value="__('Telefone')" />
+            <x-text-input id="num_telefone" name="num_telefone" type="text" class="mt-1 block w-full text-gray-900" :value="old('num_telefone', $user->num_telefone)"
+                required autofocus autocomplete="num_telefone" />
+            <x-input-error class="mt-2" :messages="$errors->get('num_telefone')" />
         </div>
 
         <div class="flex items-center gap-4">

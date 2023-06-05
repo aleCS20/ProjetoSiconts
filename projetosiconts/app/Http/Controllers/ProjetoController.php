@@ -35,7 +35,7 @@ class ProjetoController extends Controller
         $projeto->titulo = $request->input('titulo');
         $projeto->duracao = $request->input('duracao');
         $projeto->descricao = $request->input('descricao');
-        $projeto->numIntegrantes = $request->input('numIntegrantes');
+        $projeto->num_integrantes = $request->input('num_integrantes');
         $projeto->andamento = $request->input('andamento');
 
         //..persiste o model na base de dados

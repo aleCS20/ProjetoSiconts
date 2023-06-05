@@ -59,16 +59,16 @@
 
                         <!-- Data de início -->
                         <div class="mt-4">
-                            <x-input-label for="dataInicio" :value="__('Data de Ínicio')" />
-                            <x-text-input id="dataInicio" class="block mt-1 w-full" type="date" name="dataInicio" :value="old('dataInicio')" required autofocus autocomplete="dataInicio" />
-                            <x-input-error :messages="$errors->get('dataInicio')" class="mt-2" />
+                            <x-input-label for="data_inicio" :value="__('Data de Ínicio')" />
+                            <x-text-input id="data_inicio" class="block mt-1 w-full" type="date" name="data_inicio" :value="old('data_inicio')" required autofocus autocomplete="data_inicio" />
+                            <x-input-error :messages="$errors->get('data_inicio')" class="mt-2" />
                         </div>
 
                         <!-- Data de término -->
                         <div class="mt-4">
-                            <x-input-label for="dataTermino" :value="__('Data de Término')" />
-                            <x-text-input id="dataTermino" class="block mt-1 w-full" type="date" name="dataTermino" :value="old('dataTermino')" required autofocus autocomplete="dataTermino" />
-                            <x-input-error :messages="$errors->get('dataTermino')" class="mt-2" />
+                            <x-input-label for="data_termino" :value="__('Data de Término')" />
+                            <x-text-input id="data_termino" class="block mt-1 w-full" type="date" name="data_termino" :value="old('data_termino')" required autofocus autocomplete="data_termino" />
+                            <x-input-error :messages="$errors->get('data_termino')" class="mt-2" />
                         </div>
 
 

@@ -10,6 +10,6 @@ class Tarefa extends Model
     use HasFactory;
 
     protected $fillable = [
-        'descricao', 'status', 'dataInicio', 'dataTermino', 'comentario',
+        'descricao', 'status', 'data_inicio', 'data_termino', 'comentario',
     ];
 }

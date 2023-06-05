@@ -10,6 +10,6 @@ class Sprint extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nome', 'duracao', 'numItens', 'status',
+        'nome', 'duracao', 'num_itens', 'status',
     ];
 }

@@ -40,8 +40,8 @@
 
                         <!-- Número de itens -->
                         <div class="mt-4">
-                            <x-input-label for="numItens">Número de Itens / Máximo de 9 Itens por Sprint</x-input-label>
-                                <select name="numItens" class="bg-gray-50 border border-gray-300 text-gray-900
+                            <x-input-label for="num_itens">Número de Itens / Máximo de 9 Itens por Sprint</x-input-label>
+                                <select name="num_itens" class="bg-gray-50 border border-gray-300 text-gray-900
                                 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
                                 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black
                                 dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -60,7 +60,7 @@
                             <!--<x-input-label for="numItens" :value="__('Número de Itens')" />
                             <x-text-input id="numItens" class="block mt-1 w-full" type="text" name="numItens" :value="old('numItens')"
                             required autofocus autocomplete="numItens" />-->
-                            <x-input-error :messages="$errors->get('numItens')" class="mt-2" />
+                            <x-input-error :messages="$errors->get('num_itens')" class="mt-2" />
                         </div>
 
                         <!-- Status da sprint -->

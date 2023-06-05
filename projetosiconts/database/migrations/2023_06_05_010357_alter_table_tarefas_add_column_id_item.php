@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('tarefas', function (Blueprint $table) {
             //
-            $table->string('sexo');
-            $table->string('num_telefone');
+            $table->unsignedBigInteger('id_item')->after('id_tarefa');
+            $table->foreign('id_item')->references('id_item')->on('itens');
         });
     }
 
@@ -23,8 +23,10 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('tarefas', function (Blueprint $table) {
             //
+            $table->dropForeign('tarefas_id_item_foreign');
+            $table->dropColumn('id_item');
         });
     }
 };

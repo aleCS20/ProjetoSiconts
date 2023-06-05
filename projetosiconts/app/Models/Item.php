@@ -10,6 +10,6 @@ class Item extends Model
     use HasFactory;
 
     protected $fillable = [
-        'titulo','descricao',
+        'titulo','descricao','nome_sprint',
     ];
 }
