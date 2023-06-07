@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('itens', function (Blueprint $table) {
+        Schema::table('times', function (Blueprint $table) {
             //
-            $table->unsignedBigInteger('id_projeto')->after('id_sprint');
+            $table->unsignedBigInteger('id_projeto')->after('id_time');
             $table->foreign('id_projeto')->references('id_projeto')->on('projetos');
         });
     }
@@ -23,9 +23,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('itens', function (Blueprint $table) {
+        Schema::table('times', function (Blueprint $table) {
             //
-            $table->dropForeign('itens_id_projeto_foreign');
+            $table->dropForeign('times_id_projeto_foreign');
             $table->dropColumn('id_projeto');
         });
     }

@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::table('itens', function (Blueprint $table) {
             //
-            $table->string('nome_sprint');
+            $table->unsignedBigInteger('id_projeto')->after('id_item');
+            $table->foreign('id_projeto')->references('id_projeto')->on('projetos');
         });
     }
 
@@ -24,6 +25,8 @@ return new class extends Migration
     {
         Schema::table('itens', function (Blueprint $table) {
             //
+            $table->dropForeign('itens_id_projeto_foreign');
+            $table->dropColumn('id_projeto');
         });
     }
 };
