@@ -14,15 +14,15 @@
                         <!-- descrição do item da sprint -->
                         <div class="mt-4">
                             <x-input-label for="descricao" :value="__('Descrição da Tarefa')" />
-                                <select name="nome" id="nome" class="bg-gray-50 border border-gray-300 text-gray-900
+                                <!--<select name="nome" id="nome" class="bg-gray-50 border border-gray-300 text-gray-900
                                     text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
                                     dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black
                                     dark:focus:ring-blue-500 dark:focus:border-blue-500">
 
-                                </select>
+                                </select>-->
 
-                            <!--<x-text-input id="descricao" class="block mt-1 w-full" type="text" name="descricao" :value="old('descricao')"
-                            required autofocus autocomplete="descricao" />-->
+                            <x-text-input id="descricao" class="block mt-1 w-full" type="text" name="descricao" :value="old('descricao')"
+                            required autofocus autocomplete="descricao" />
                             <x-input-error :messages="$errors->get('descricao')" class="mt-2" />
                         </div>
 
@@ -73,16 +73,19 @@
 
 
                         <div class="flex items-center justify-end mt-4">
-                            <x-primary-button class="ml-4">
-                                {{ __('Adicionar') }}
-                            </x-primary-button>
+                            <button class="enviar" onclick="Enviar();">
+                                {{ __('Salvar/Adicionar') }}
+                            </button>
 
-                            <x-primary-button class="ml-4">
+                            <!--<x-primary-button class="ml-4">
                                 {{ __('Salvar') }}
-                            </x-primary-button>
+                            </x-primary-button>-->
                         </div>
 
                     </form>
+
+                    <script src="js/actions.js"></script>
+
                 </div>
             </div>
         </div>

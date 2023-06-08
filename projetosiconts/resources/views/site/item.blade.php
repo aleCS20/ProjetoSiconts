@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Novo Item da Sprint Backlog') }}
+            {{ __('Novo Item do Backlog') }}
         </h2>
     </x-slot>
     <div class="py-12">
@@ -12,7 +12,7 @@
                         @csrf
 
                         <!-- Nome da Sprint -->
-                        <div class="mt-4">
+                        <!--<div class="mt-4">
                             <x-input-label for="nome">Nome da Sprint</x-input-label>
                                 <select name="nome" id="nome" class="bg-gray-50 border border-gray-300 text-gray-900
                                     text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
@@ -21,11 +21,11 @@
 
                                 </select>
 
-                            <!--<x-input-label for="nome" :value="__('Nome da Sprint')" />
+                            <x-input-label for="nome" :value="__('Nome da Sprint')" />
                             <x-text-input id="nome" class="block mt-1 w-full" type="text" name="nome" :value="old('nome')"
                             required autofocus autocomplete="nome" />-->
-                            <x-input-error :messages="$errors->get('nome')" class="mt-2" />
-                        </div>
+                            <!--<x-input-error :messages="$errors->get('nome')" class="mt-2" />
+                        </div>-->
 
                         <!-- Titulo do item -->
                         <div class="mt-4">
@@ -48,14 +48,14 @@
                         </div>
 
                         <div class="flex items-center justify-end mt-4">
-                            <x-primary-button class="ml-4">
-                                {{ __('Adicionar') }}
-                            </x-primary-button>
 
-                            <x-primary-button class="ml-4">
-                                {{ __('Salvar') }}
-                            </x-primary-button>
+                            <button class="enviar" onclick="Enviar();">
+                                {{ __('Salvar/Adicionar') }}
+                            </button>
+
                         </div>
+
+                        <script src="js/actions_items.js"></script>
 
                     </form>
                 </div>
