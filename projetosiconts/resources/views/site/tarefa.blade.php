@@ -73,9 +73,9 @@
 
 
                         <div class="flex items-center justify-end mt-4">
-                            <button class="enviar" onclick="Enviar();">
+                            <x-primary-button class="ml-4">>
                                 {{ __('Salvar/Adicionar') }}
-                            </button>
+                            </x-primary-button>
 
                             <!--<x-primary-button class="ml-4">
                                 {{ __('Salvar') }}

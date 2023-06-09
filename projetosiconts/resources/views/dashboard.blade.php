@@ -12,6 +12,7 @@
                     <!-- {{ __("Conteúdo do Quadro Scrum!") }} -->
 
                     <!-- inicio do quadro kanban -->
+
                     <div class="boards">
                         <div class="board">
                             <h2 class="color-font">ITENS</h2>
@@ -79,6 +80,7 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- fim do quadro kanban -->
 
                 </div>
@@ -86,6 +88,6 @@
         </div>
     </div>
 
-
+    <script src="js/actions_items.js"></script>
 
 </x-app-layout>
