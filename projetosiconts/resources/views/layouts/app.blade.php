@@ -14,6 +14,9 @@
         <!-- style of board -->
         <link rel="stylesheet" href="css/style-board.css">
 
+        <!-- style of modal -->
+        <link rel="stylesheet" href="css/style-modal.css" />
+
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>

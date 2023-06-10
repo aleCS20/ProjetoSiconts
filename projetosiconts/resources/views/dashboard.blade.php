@@ -17,11 +17,12 @@
                         <div class="board">
                             <h2 class="color-font">ITENS</h2>
                             <div class="dropZone" id="item">
-                                <div>
+                                <div class="wrapper">
                                     <!-- botão para o modal -->
-                                    <a href="{{route('item')}}">
-                                        <button type="button" id="button-add-item">
-                                            Adicionar Item</span>
+                                    <!--<a href="{{route('item')}}">-->
+                                    <a href="#demo-modal">
+                                        <button id="button-add-item">
+                                            Adicionar Item<span>
                                         </button>
                                     </a>
                                 </div>
@@ -39,8 +40,9 @@
                         <div class="board">
                             <h2 class="color-font">A FAZER</h2>
                             <div class="dropZone" id="todo">
-                                <div>
-                                    <a href="{{route('tarefa')}}">
+                                <div class="wrapper">
+                                    <!--<a href="{{route('tarefa')}}">-->
+                                    <a href="#demo-modal2">
                                         <button id="button-add-tarefa">
                                             Adicionar Tarefa</span>
                                         </button>
@@ -88,6 +90,157 @@
         </div>
     </div>
 
+
     <script src="js/actions_items.js"></script>
 
 </x-app-layout>
+
+<div id="demo-modal" class="modal">
+        <div class="content">
+
+            <form method="POST" action="{{route('item')}}" id="formulario" name="meuForm">
+                <div class="box">
+                @csrf
+                <h1>Adicionar Item</h1>
+                <!-- Nome da Sprint -->
+                    <!--<div class="mt-4">
+                        <x-input-label for="nome">Nome da Sprint</x-input-label>
+                        <select name="nome" id="nome" class="bg-gray-50 border border-gray-300 text-gray-900
+                            text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
+                            dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black
+                            dark:focus:ring-blue-500 dark:focus:border-blue-500">
+
+                        </select>
+
+                            <x-input-label for="nome" :value="__('Nome da Sprint')" />
+                            <x-text-input id="nome" class="block mt-1 w-full" type="text" name="nome" :value="old('nome')"
+                            required autofocus autocomplete="nome" />-->
+                            <!--<x-input-error :messages="$errors->get('nome')" class="mt-2" />
+                    </div>-->
+
+                    <!-- Titulo do item -->
+                    <div class="mt-4">
+                        <x-input-label for="titulo" :value="__('Titulo do Item')" />
+                        <x-text-input id="titulo" class="block mt-1 w-full" type="text" name="titulo" :value="old('titulo')"
+                             required autofocus autocomplete="titulo" />
+                        <x-input-error :messages="$errors->get('titulo')" class="mt-2" />
+                    </div>
+
+                    <!-- Descricao do item -->
+                    <div class="mt-4">
+                        <x-input-label for="descricao" :value="__('Descrição do Item')" />
+                        <textarea id="descricao" name="descricao" rows="4" class="block mt-1 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border
+                            border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600
+                            dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Digite uma descrição..."></textarea>
+
+                        <!--<x-text-input id="descricao" class="block mt-1 w-full" type="text" name="descricao" :value="old('descricao')"
+                            required autofocus autocomplete="descricao" />-->
+                        <x-input-error :messages="$errors->get('descricao')" class="mt-2" />
+                    </div>
+
+                    <div class="flex items-center justify-end mt-4">
+
+                        <x-primary-button class="ml-4">
+                                {{ __('Salvar/Adicionar') }}
+                        </x-primary-button>
+
+                    </div>
+
+                    <!--<script src="js/actions_items.js"></script>-->
+                </div>
+            </form>
+
+            <div class="footer">
+                <a href="#" class="footer-btn-close"> Fechar </a>
+            </div>
+            <a href="#" class="close">&times;</a>
+        </div>
+    </div>
+
+<div id="demo-modal2" class="modal">
+        <div class="content">
+
+            <form method="POST" action="{{route('tarefa')}}" name="meuForm2" id="formulario2">
+                        <div class="box">
+                    @csrf
+                    <h1>Adicionar Tarefa</h1>
+
+                        <!-- descrição do item da sprint -->
+                        <div class="mt-4">
+                            <x-input-label for="descricao" :value="__('Descrição da Tarefa')" />
+                                <!--<select name="nome" id="nome" class="bg-gray-50 border border-gray-300 text-gray-900
+                                    text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
+                                    dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black
+                                    dark:focus:ring-blue-500 dark:focus:border-blue-500">
+
+                                </select>-->
+
+                            <x-text-input id="descricao" class="block mt-1 w-full" type="text" name="descricao" :value="old('descricao')"
+                            required autofocus autocomplete="descricao" />
+                            <x-input-error :messages="$errors->get('descricao')" class="mt-2" />
+                        </div>
+
+                        <!-- comentário da tarefa -->
+                        <div class="mt-4">
+                            <x-input-label for="comentario" :value="__('Comentário da Tarefa')" />
+                                <textarea id="comentario" name="comentario" rows="4" class="block mt-1 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border
+                                    border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600
+                                    dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Digite um comentário..."></textarea>
+
+                            <!--<x-text-input id="descricao" class="block mt-1 w-full" type="text" name="descricao" :value="old('descricao')"
+                            required autofocus autocomplete="descricao" />-->
+                            <x-input-error :messages="$errors->get('comentario')" class="mt-2" />
+                        </div>
+
+                        <!-- Status -->
+                        <div class="mt-4">
+                            <x-input-label for="status">Status</x-input-label>
+                                <select name="status" class="bg-gray-50 border border-gray-300 text-gray-900
+                                text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
+                                dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black
+                                dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                    <option value="" selected></option>
+                                    <option value="A Fazer">A Fazer</option>
+                                    <option value="Fazendo">Fazendo</option>
+                                    <option value="Pronto">Pronto</option>
+                                </select>
+
+                            <!-- <x-input-label for="numIntegrantes" :value="__('Número de Integrantes')" />
+                            <x-text-input id="numIntegrantes" class="block mt-1 w-full" type="text" name="numIntegrantes" :value="old('numIntegrantes')"
+                            required autofocus autocomplete="numIntegrantes" />-->
+                            <x-input-error :messages="$errors->get('numIntegrantes')" class="mt-2" />
+                        </div>
+
+                        <!-- Data de início -->
+                        <div class="mt-4">
+                            <x-input-label for="data_inicio" :value="__('Data de Ínicio')" />
+                            <x-text-input id="data_inicio" class="block mt-1 w-full" type="date" name="data_inicio" :value="old('data_inicio')" required autofocus autocomplete="data_inicio" />
+                            <x-input-error :messages="$errors->get('data_inicio')" class="mt-2" />
+                        </div>
+
+                        <!-- Data de término -->
+                        <div class="mt-4">
+                            <x-input-label for="data_termino" :value="__('Data de Término')" />
+                            <x-text-input id="data_termino" class="block mt-1 w-full" type="date" name="data_termino" :value="old('data_termino')" required autofocus autocomplete="data_termino" />
+                            <x-input-error :messages="$errors->get('data_termino')" class="mt-2" />
+                        </div>
+
+
+                        <div class="flex items-center justify-end mt-4">
+                            <x-primary-button class="ml-4">>
+                                {{ __('Salvar/Adicionar') }}
+                            </x-primary-button>
+
+                            <!--<x-primary-button class="ml-4">
+                                {{ __('Salvar') }}
+                            </x-primary-button>-->
+                        </div>
+
+                    </form>
+                    <div class="footer">
+                <a href="#" class="footer-btn-close"> Fechar </a>
+            </div>
+            <a href="#" class="close">&times;</a>
+
+        </div>
+</div>
