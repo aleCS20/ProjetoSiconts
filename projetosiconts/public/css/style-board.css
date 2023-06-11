@@ -1,29 +1,54 @@
-/*--------- configuração do dashboard quadro -----------*/
+/*--------- configuração do dashboard - tela principal -----------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* configuração da tela principal section = boards */
+body {
+    font-family: 'Nunito', sans-serif;
+
+    background-color: white;
+    color: #fff;
+
+    width: 100vw;
+    min-height: 100vh;
+    padding: 30px 30px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    overflow-x: hidden;
+}
+
 .boards {
     width: 100%;
     min-height: 100%;
     flex: 1;
     display: flex;
     justify-content: space-between;
+   
 }
-/* conteúdo dos cards das colunas do board */
-.board{
-    width: 30%;
+
+.board {
+    width: 33%;
     min-height: 100%;
     margin: 0 15px;
-    display: flex;
-    flex-direction: column;
     background-color: white;
     border: 1px solid black;
-    border-radius: 5px;
-    align-items: center;
-}
-/* conteúdo do título das colunas do board */
-.board h2{
+    border-radius: 7px;
     text-align: center;
-    color: rgb(26, 17, 17);
+}
+
+#doing {
+    margin: 0 0;
+}
+
+.board h2 {
+    text-align: center;
+    padding: 30px 15px 15px 15px;
+    color: black;
     font-weight: bold;
 }
 
@@ -31,46 +56,69 @@
     padding: 15px;
     width: 100%;
     height: calc(100% - 80px);
+
     transition: .2s;
 }
-/* configuração dos cards ao serem inseridos no board */
+
 .card {
     width: 100%;
     height: auto;
     padding: 15px;
     margin-bottom: 15px;
     background-color: white;
-    box-shadow: 0 2px 2px -1px black;
-    border-radius: 5px;
+    box-shadow: 0 2px 2px -1px #1765f5cc;
+    border-radius: 7px;
     font-weight: 600;
     font-size: 18px;
     word-wrap: break-word;
+
     transition: .2s;
 }
-/* ---- configuração dos botões do dashboard ---- */
-.addItem, .addTarefa{
-    border: 1px solid;
-    border-color: black;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 16px;
-    color: white;
+
+.card:hover {
+    cursor: move;
+}
+
+.status {
+    width: 10%;
+    height: 5px;
+    margin-bottom: 15px;
     border-radius: 5px;
-    box-shadow: 0 2px 2px -1px black;
-    height: 30px;
-    width: 140px;
-    align-items: center;
+    background-color: #fd951fcc;
 }
 
-.addItem{
+.backlog{
     background-color: blue;
-
 }
 
-.addTarefa{
+.todo {
     background-color: red;
 }
-/*-----------   ----------*/
 
+.doing {
+    background-color: yellow;
+}
+
+.done {
+    background-color: green;
+}
+
+/* configuração do botão de adicionar itens e tarefas*/
+.botoes{
+    align-items: center;
+    text-align: center;
+}
+
+.addItem, .addTarefa{
+    background-color: #4CAF50;
+    border: black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 7px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

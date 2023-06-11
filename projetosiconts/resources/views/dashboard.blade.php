@@ -13,53 +13,58 @@
 
                     <!-- inicio do quadro kanban -->
 
-                        <div class="boards">
-                            <div class="board">
-                                <h2>BACKLOG</h2>
-                                <div class="addItem">
-                                    <button>Adicionar Item</button>
-                                </div>
-                                <div id="backlog" class="dropzone">
-                                    <!--<div class="card" draggable="false">
-                                        <div class="status backlog"></div>
-                                        <div class="content"></div>
-                                    </div>-->
-                                </div>
+                    <div class="boards">
+                        <!-- Quadro de tarefas para fazer -->
+                        <div class="board">
+                            <h2>BACKLOG</h2>
+                            <div class="botoes">
+                                <a href="#" class="addItem">Adicionar Item</a>
                             </div>
+                            <div class="dropZone" id="backlog">
+                                <!-- Cartões de tarefas -->
 
-                            <div class="board">
-                                <h2>A FAZER</h2>
-                                <div class="addTarefa">
-                                    <button>Adicionar Tarefa</button>
-                                </div>
-                                <div id="backlog" class="dropzone">
-                                    <!--<div class="card" draggable="true">
-                                        <div class="status backlog"></div>
-                                        <div class="content"></div>
-                                    </div>-->
-                                </div>
-                            </div>
-
-                            <div class="board">
-                                <h2>FAZENDO</h2>
-                                <div id="backlog" class="dropzone">
-                                    <!--<div class="card" draggable="true">
-                                        <div class="status backlog"></div>
-                                        <div class="content"></div>
-                                    </div>-->
-                                </div>
-                            </div>
-
-                            <div class="board">
-                                <h2>PRONTO</h2>
-                                <div id="backlog" class="dropzone">
-                                    <!--<div class="card" draggable="true">
-                                        <div class="status backlog"></div>
-                                        <div class="content"></div>
-                                    </div>-->
+                                <div class="card" draggable="false">
+                                    <div class="status backlog"></div>
+                                    <div class="content"></div>
                                 </div>
                             </div>
                         </div>
+                        <div class="board">
+                            <h2>A FAZER</h2>
+                            <div class="botoes">
+                                <a href="#" class="addTarefa">Adicionar Tarefa</a>
+                            </div>
+                            <div class="dropZone" id="todo">
+                                <!-- Cartões de tarefas -->
+                                <div class="card" draggable="true">
+                                    <div class="status todo"></div>
+                                    <div class="content"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Quadro de tarefas sendo feitas -->
+                        <div class="board">
+                            <h2>FAZENDO</h2>
+                            <div class="dropZone" id="doing">
+                                <div class="card" draggable="true">
+                                    <div class="status doing"></div>
+                                    <div class="content"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Quadro de tarefas já feitas -->
+                        <div class="board">
+                            <h2>PRONTO!</h2>
+                            <div class="dropZone" id="done">
+                                <div class="card" draggable="true">
+                                    <div class="status done"></div>
+                                    <div class="content"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- fim do quadro kanban -->
 
@@ -70,5 +75,3 @@
 
 
 </x-app-layout>
-
-
