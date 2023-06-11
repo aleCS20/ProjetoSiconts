@@ -1,27 +1,6 @@
-/*
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}*/
+/*--------- configuração do dashboard quadro -----------*/
 
-body {
-    font-family: 'Nunito', sans-serif;
-
-    background-color: white;
-    color: #fff;
-
-    width: 100vw;
-    min-height: 100vh;
-    padding: 30px 30px;
-
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-    overflow-x: hidden;
-}
-
+/* configuração da tela principal section = boards */
 .boards {
     width: 100%;
     min-height: 100%;
@@ -29,25 +8,22 @@ body {
     display: flex;
     justify-content: space-between;
 }
-
-.board {
-    width: 33%;
+/* conteúdo dos cards das colunas do board */
+.board{
+    width: 30%;
     min-height: 100%;
     margin: 0 15px;
+    display: flex;
+    flex-direction: column;
     background-color: white;
     border: 1px solid black;
     border-radius: 5px;
+    align-items: center;
 }
-
-#doing {
-    margin: 0 0;
-}
-
-.board h2 {
+/* conteúdo do título das colunas do board */
+.board h2{
     text-align: center;
-    padding: 30px 15px 15px 15px;
-    color: black;
-    text-decoration: solid;
+    color: rgb(26, 17, 17);
     font-weight: bold;
 }
 
@@ -57,207 +33,44 @@ body {
     height: calc(100% - 80px);
     transition: .2s;
 }
-
+/* configuração dos cards ao serem inseridos no board */
 .card {
     width: 100%;
     height: auto;
     padding: 15px;
     margin-bottom: 15px;
     background-color: white;
-    box-shadow: 0 2px 2px -1px #FD951Fcc;
+    box-shadow: 0 2px 2px -1px black;
     border-radius: 5px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 18px;
     word-wrap: break-word;
     transition: .2s;
 }
-
-.card:hover {
-    cursor: move;
-}
-
-.status {
-    width: 10%;
-    height: 5px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    background-color: #fd951fcc;
-}
-
-.item {
-    background-color: blue;
-}
-
-.todo {
-    background-color: red;
-}
-
-.doing {
-    background-color: yellow;
-}
-
-.done {
-    background-color: green;
-}
-
-.highlight {
-    background-color: #df951f08;
-}
-
-.dragging {
-    cursor: move;
-    opacity: 0.3;
-}
-
-.over {
-    background-color: #4ccd3711;
-}
-
-.footer {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-}
-/*
-.task {
-    width: 33%;
-    height: 100px;
-    margin: 30px 15px 0px 15px;
-    padding: 15px;
-    background-color: #141316;
-    border: 1px solid #fd951f11;
-    border-radius: 5px;
-}
-
-.task form {
-    display: flex;
-    justify-content: space-between;
-}
-
-.color-font {
-    color: #fd951fcc;
+/* ---- configuração dos botões do dashboard ---- */
+.addItem, .addTarefa{
+    border: 1px solid;
+    border-color: black;
     text-align: center;
-    padding-bottom: 5px;
-}
-
-.task input {
-    width: 80%;
-    height: 30px;
-    background-color: #130f0d;
-    border: 2px solid #fd951f11;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 1.2em;
-    padding: 15px;
-}
-
-.task input:focus,
-.task input:hover {
-    border-bottom: 3px solid #fd951fcc;
-}
-
-.task button {
-    background: none;
-    border: none;
-    width: 20%;
-    height: 30px;
-}
-
-.task button:hover {
+    text-decoration: none;
+    font-weight: bold;
     cursor: pointer;
-}
-*/
-.dropZone button img {
-    height: 20px;
-}
-/*
-.info {
-    width: 33%;
-    height: 100px;
-    margin: 30px 15px 0px 15px;
-
-    padding: 15px;
-    border: 5px solid #fd951fcc;
+    font-size: 16px;
+    color: white;
     border-radius: 5px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    box-shadow: 0 2px 2px -1px black;
+    height: 30px;
+    width: 140px;
+    align-items: center;
 }
 
-.logo {
-    color: #fd951fcc;
-    font-weight: 900;
-    font-size: 2.5em;
-    line-height: .8em;
-    width: 130px;
-}
-
-.slogan {
-    margin-left: 15px;
-    color: #fd951fcc;
-    text-align: right;
-}
-
-.garbage {
-    width: 33%;
-    height: 100px;
-    margin: 30px 15px 0px 15px;
-    background-color: #141316;
-    border: 1px solid #fd951f11;
-    border-radius: 5px;
-    background-image: url('../icons/trash.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 50px;
-}
-
-.garbage h2 {
-    visibility: hidden;
-    height: 0;
-}
-
-.garbage .dropZone {
-    height: 100%;
-}
-*/
-#button-add-item {
-    margin: 0.2rem 0rem 0.1rem 0rem;
+.addItem{
     background-color: blue;
-    border-radius: 2px;
-    width: 100%;
-    border: 1px solid black;
-    padding: 0.5rem 2.7rem;
-    border-radius: 0.3rem;
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
+
 }
 
-#button-add-tarefa {
-    margin: 0.2rem 0rem 0.1rem 0rem;
+.addTarefa{
     background-color: red;
-    border-radius: 2px;
-    width: 100%;
-    border: 1px solid black;
-    padding: 0.5rem 2.7rem;
-    border-radius: 0.3rem;
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
 }
+/*-----------   ----------*/
 
-@media all and (max-width: 600px) {
-    /*
-  FAZER RESPONSIVIDADE MOBILE
-  .boards{
-    flex-direction: column;
-    justify-content: center;
-  }
-  .board{
-    min-height: 30vh;
-    margin-bottom: 15px;
-  }
-  */
-}
