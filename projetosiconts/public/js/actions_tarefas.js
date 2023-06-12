@@ -1,8 +1,5 @@
-//script para adicionar apenas cartões na coluna de backlog
-//<div class="card" draggable="true"> <div class="status todo"></div> <div class="content">Dinamicamente.</div></div>
-
-const formTask = document.getElementById('addItem');
-const task = document.getElementById('descricao');
+const formTask = document.getElementById('addTarefa');
+const task = document.getElementById('comentario');
 
 formTask.addEventListener('submit', (event) => {
     if (task.value != '') {
@@ -13,12 +10,12 @@ formTask.addEventListener('submit', (event) => {
 })
 
 function addCard(value) {
-    const backlog = document.querySelector('#backlog');
+    const todo = document.querySelector('#todo');
     const newCard = document.createElement("div");
     newCard.classList.add('card');
-    newCard.draggable = false;
+    newCard.draggable = true;
     newCard.innerHTML = `
-    <div class="status backlog"></div>
+    <div class="status todo"></div>
     <div class="content"><p>`+ value + `</p></div>
   `;
     newCard.addEventListener('dragstart', dragStart);
@@ -41,9 +38,6 @@ function dragStart() {
     this.classList.add('dragging');
 
     switch (this.parentElement.id) {
-        case 'backlog':
-            this.firstElementChild.classList.remove('backlog');
-            break;
         case 'todo':
             this.firstElementChild.classList.remove('todo');
             break;
@@ -70,9 +64,6 @@ function dragEnd() {
     this.classList.remove('dragging');
 
     switch (this.parentElement.id) {
-        case 'backlog':
-            this.firstElementChild.classList.add('backlog');
-            break;
         case 'todo':
             this.firstElementChild.classList.add('todo');
             break;
@@ -116,4 +107,3 @@ function dragLeave() {
 function drop() {
     this.classList.remove('over');
 }
-

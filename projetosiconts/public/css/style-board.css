@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/*  ------------ body - configuração da página principal ------------ */
 body {
     font-family: 'Nunito', sans-serif;
 
@@ -21,16 +21,16 @@ body {
 
     overflow-x: hidden;
 }
-
+/* --------------- configuração da div boards para composição das colunas ------------------*/
 .boards {
     width: 100%;
     min-height: 100%;
     flex: 1;
     display: flex;
     justify-content: space-between;
-   
-}
 
+}
+/* --------------- configuração da div board para cada coluna ------------------*/
 .board {
     width: 33%;
     min-height: 100%;
@@ -56,10 +56,9 @@ body {
     padding: 15px;
     width: 100%;
     height: calc(100% - 80px);
-
     transition: .2s;
 }
-
+/* ----------- configuração dos cartões a serem inseridos ----------- */
 .card {
     width: 100%;
     height: auto;
@@ -71,7 +70,6 @@ body {
     font-weight: 600;
     font-size: 18px;
     word-wrap: break-word;
-
     transition: .2s;
 }
 
@@ -86,7 +84,7 @@ body {
     border-radius: 5px;
     background-color: #fd951fcc;
 }
-
+/* --------------- configuração dos cartões conforme sua inserção nas colunas ---- */
 .backlog{
     background-color: blue;
 }
@@ -103,7 +101,21 @@ body {
     background-color: green;
 }
 
-/* configuração do botão de adicionar itens e tarefas*/
+.highlight {
+    background-color: #df951f08;
+}
+
+.dragging {
+    cursor: move;
+    opacity: 0.3;
+}
+
+.over {
+    background-color: #4ccd3711;
+}
+
+
+/* --------- configuração do botão de adicionar itens e tarefas -------- */
 .botoes{
     align-items: center;
     text-align: center;
@@ -121,4 +133,16 @@ body {
     border-radius: 7px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* --------- --------- */
+.btn{
+    background-color: #4CAF50;
+    color: black;
+    border: black;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 7px;
+    padding: 9px 20px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
