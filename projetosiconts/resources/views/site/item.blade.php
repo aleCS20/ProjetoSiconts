@@ -55,8 +55,6 @@
 
                         </div>
 
-                        <!--<script src="js/actions_items.js"></script>-->
-
                     </form>
                 </div>
             </div>

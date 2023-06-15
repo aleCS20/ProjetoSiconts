@@ -29,7 +29,7 @@
                         <!-- comentário da tarefa -->
                         <div class="mt-4">
                             <x-input-label for="comentario" :value="__('Comentário da Tarefa')" />
-                                <textarea id="comentario" name="descricao" rows="4" class="block mt-1 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border
+                                <textarea id="comentario" name="comentario" rows="4" class="block mt-1 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border
                                     border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600
                                     dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Digite uma descrição..."></textarea>
 
@@ -73,7 +73,7 @@
 
 
                         <div class="flex items-center justify-end mt-4">
-                            <x-primary-button class="ml-4">>
+                            <x-primary-button class="ml-4">
                                 {{ __('Salvar/Adicionar') }}
                             </x-primary-button>
 
@@ -83,8 +83,6 @@
                         </div>
 
                     </form>
-
-                    <script src="js/actions.js"></script>
 
                 </div>
             </div>

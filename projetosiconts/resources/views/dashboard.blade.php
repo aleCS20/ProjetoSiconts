@@ -127,13 +127,13 @@
 
                 </div>
 
-                <button class="btn" type="submit">Adicionar</button>
+                <button class="btn" type="submit" onclick="enviar_item()">Adicionar</button>
             </form>
             <!-- botão para adiconar item a coluna do backlog -->
             <!--<a href="#" class="footer-btn"> Adicionar </a>-->
 
             <a href="#" class="close">&times;</a>
-            <!--<script src="js/actions_items.js"></script>-->
+
         </div>
     </div>
 
@@ -214,22 +214,21 @@
                         {{ __('Salvar') }}
                     </x-primary-button>
 
-                    <!--<x-primary-button class="ml-4">
-                        {{ __('Salvar') }}
-                    </x-primary-button>-->
                 </div>
-                <button class="btn" type="submit"> Adicionar </button>
+                <button class="btn" type="submit" onclick="enviar_task()"> Adicionar </button>
             </form>
             <!-- botão para adicionar tarefa ao dashboard -->
             <!--<a href="#" class="footer-btn"> Adicionar </a>-->
 
             <a href="#" class="close">&times;</a>
-            <!--<script src="js/actions_tarefas.js"></script>-->
+
         </div>
     </div>
     <!------- final do modal adicionar tarefa ------->
+
     <script src="js/actions_items.js"></script>
     <script src="js/actions_tarefas.js"></script>
+
 </x-app-layout>
 
 
