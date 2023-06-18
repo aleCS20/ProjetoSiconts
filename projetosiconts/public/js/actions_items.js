@@ -14,13 +14,13 @@ function enviar_item() {
         }
         event.preventDefault();
     })
-    //função para adicionar o valor da descrição para criar um card 'cartão'.
+    //função para adicionar o valor da descrição para criar um card 'item'.
     function addCard(value) {
         const todo = document.querySelector('#backlog');//define o local de inserção do card no dashboard
         const newCard = document.createElement("div");//define o local de inserção do card em uma div
         newCard.classList.add('card');//
         newCard.draggable = true;
-        //aqui o cartão é inserido na coluna backlog
+        //aqui o item é inserido na coluna backlog
         newCard.innerHTML = `
             <div class="status backlog"></div>
             <div class="content"><p>`+ value + `</p></div>
@@ -39,7 +39,7 @@ function enviar_item() {
         card.addEventListener('drag', drag);
         card.addEventListener('dragend', dragEnd);
     })
-    //função para iniciar o cartão
+    //função para iniciar o item
     function dragStart() {
         dropZones.forEach(dropZone => dropZone.classList.add('highlight'));
         this.classList.add('dragging');
