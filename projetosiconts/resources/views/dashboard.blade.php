@@ -23,7 +23,7 @@
                                 <a href="#modal-AddItem" class="addItem">Adicionar Item</a>
                             </div>
                             <div class="dropZone" id="backlog">
-                                <!-- Cartões de itens do backlog -->
+                                <!-- ------- Coluna de itens do backlog -------- -->
 
                                 <div class="card" draggable="false">
                                     <div class="status backlog"></div>
@@ -38,14 +38,14 @@
                                 <a href="#modal-AddTarefa" class="addTarefa">Adicionar Tarefa</a>
                             </div>
                             <div class="dropZone" id="todo">
-                                <!-- Cartões de tarefas a fazer-->
+                                <!-- Coluna de tarefas a fazer-->
                                 <div class="card" draggable="true">
                                     <div class="status todo"></div>
                                     <div class="content"></div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Quadro de tarefas sendo feitas -->
+                        <!--  ----- Coluna de tarefas sendo feitas ------ -->
                         <div class="board">
                             <h2>FAZENDO</h2>
                             <div class="dropZone" id="doing">
@@ -56,7 +56,7 @@
 
                             </div>
                         </div>
-                        <!-- Quadro de tarefas já feitas -->
+                        <!-- ----- Coluna de tarefas já feitas ----- -->
                         <div class="board">
                             <h2>PRONTO!</h2>
                             <div class="dropZone" id="done">
@@ -69,13 +69,13 @@
                         </div>
                     </div>
 
-                    <!-- fim do quadro kanban -->
+                    <!-- ----- fim do quadro kanban ----- -->
 
                 </div>
             </div>
         </div>
     </div>
-    <!-------- tela modal adicionar item -------->
+    <!-- -------------------------- tela modal adicionar item ---------------------------->
     <div id="modal-AddItem" class="modal">
         <div class="conteudo">
             <h1 class="titulo">ADICIONAR ITEM</h1>
@@ -137,9 +137,9 @@
         </div>
     </div>
 
-    <!------- final do modal adicionar item ------->
+    <!-- ----------------------- final do modal adicionar item ------------------------ -->
     <!-- ######################################################################################################### -->
-    <!------- tela modal adicionar tarefa ------->
+    <!-- ------------------------------ tela modal adicionar tarefa ---------------------- -->
     <div id="modal-AddTarefa" class="modal">
         <div class="conteudo">
             <h1 class="titulo">ADICIONAR TAREFA</h1>
@@ -224,7 +224,7 @@
 
         </div>
     </div>
-    <!------- final do modal adicionar tarefa ------->
+    <!-- ----------------------------- final do modal adicionar tarefa -------------- -->
 
     <script src="js/actions_items.js"></script>
     <script src="js/actions_tarefas.js"></script>

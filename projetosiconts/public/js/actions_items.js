@@ -19,7 +19,7 @@ function enviar_item() {
         const todo = document.querySelector('#backlog');//define o local de inserção do card no dashboard
         const newCard = document.createElement("div");//define o local de inserção do card em uma div
         newCard.classList.add('card');//
-        newCard.draggable = true;
+        newCard.draggable = false;
         //aqui o item é inserido na coluna backlog
         newCard.innerHTML = `
             <div class="status backlog"></div>

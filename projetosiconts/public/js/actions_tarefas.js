@@ -22,9 +22,9 @@ function enviar_task() {
         newCard.draggable = true;
         //aqui o cartão é inserido na coluna a fazer
         newCard.innerHTML = `
-    <div class="status todo"></div>
-    <div class="content"><p>`+ value + `</p></div>
-  `;
+            <div class="status todo"></div>
+            <div class="content"><p>`+ value + `</p></div>
+        `;
         newCard.addEventListener('dragstart', dragStart);//evento acionado para início de arraste
         newCard.addEventListener('drag', drag);//evento drag para elemento ser arrastado
         newCard.addEventListener('dragend', dragEnd);//evento que permite um elemento finalizar um arraste
