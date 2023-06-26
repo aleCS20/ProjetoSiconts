@@ -41,7 +41,7 @@ body {
     text-align: center;
 }
 
-#doing {
+#fazendo{
     margin: 0 0;
 }
 
@@ -59,7 +59,7 @@ body {
     transition: .2s;
 }
 /* ----------- configuração dos cartões a serem inseridos ----------- */
-.card {
+.cartao {
     width: 100%;
     height: auto;
     padding: 15px;
@@ -68,36 +68,29 @@ body {
     box-shadow: 0 2px 2px -1px #1765f5cc;
     border-radius: 7px;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 14px;
     word-wrap: break-word;
     transition: .2s;
 }
 
-.card:hover {
+.cartao:hover {
     cursor: move;
 }
 
-.status {
-    width: 10%;
-    height: 5px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    background-color: #fd951fcc;
-}
 /* --------------- configuração dos cartões conforme sua inserção nas colunas ---- */
 .backlog{
     background-color: blue;
 }
 
-.todo {
+.fazer {
     background-color: red;
 }
 
-.doing {
+.fazendo {
     background-color: yellow;
 }
 
-.done {
+.pronto {
     background-color: green;
 }
 
@@ -121,7 +114,8 @@ body {
     text-align: center;
 }
 
-.addItem, .addTarefa{
+.addItem, .addTarefa, .limpar{
+    cursor: pointer;
     background-color: #4CAF50;
     border: black;
     color: white;

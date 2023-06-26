@@ -22,13 +22,10 @@
                                 <!-- botão para acionar a tela modal de addItem -->
                                 <a href="#modal-AddItem" class="addItem">Adicionar Item</a>
                             </div>
-                            <div class="dropZone" id="backlog">
+                            <div id="backlog">
                                 <!-- Cartões de itens do backlog -->
 
-                                <div class="card" draggable="false">
-                                    <div class="status backlog"></div>
-                                    <div class="content"></div>
-                                </div>
+
                             </div>
                         </div>
                         <div class="board">
@@ -37,33 +34,28 @@
                                 <!-- botão para acionar a tela modal de addTarefa -->
                                 <a href="#modal-AddTarefa" class="addTarefa">Adicionar Tarefa</a>
                             </div>
-                            <div class="dropZone" id="todo">
+                            <div id="fazer">
                                 <!-- Cartões de tarefas a fazer-->
-                                <div class="card" draggable="true">
-                                    <div class="status todo"></div>
-                                    <div class="content"></div>
-                                </div>
+
                             </div>
                         </div>
                         <!-- Quadro de tarefas sendo feitas -->
                         <div class="board">
                             <h2>FAZENDO</h2>
-                            <div class="dropZone" id="doing">
-                                <div class="card" draggable="true">
-                                    <div class="status doing"></div>
-                                    <div class="content"></div>
-                                </div>
+                            <div id="fazendo">
+                                <!-- Cartões de tarefas sendo feitas -->
 
                             </div>
                         </div>
                         <!-- Quadro de tarefas já feitas -->
                         <div class="board">
                             <h2>PRONTO!</h2>
-                            <div class="dropZone" id="done">
-                                <div class="card" draggable="true">
-                                    <div class="status done"></div>
-                                    <div class="content"></div>
-                                </div>
+                            <div id="wrapper">
+                                <!-- botão para limpar as tarefas prontas/backlog -->
+                                <a class="limpar" onclick="clearconteudo('cartao')">Limpar</a>
+                            </div>
+                            <div id="pronto">
+
 
                             </div>
                         </div>
@@ -95,14 +87,13 @@
                         <x-input-label for="nome" :value="__('Nome da Sprint')" />
                         <x-text-input id="nome" class="block mt-1 w-full" type="text" name="nome" :value="old('nome')"
                             required autofocus autocomplete="nome" />-->
-                        <!--<x-input-error :messages="$errors->get('nome')" class="mt-2" />
+                <!--<x-input-error :messages="$errors->get('nome')" class="mt-2" />
                     </div>-->
 
                 <!-- Titulo do item -->
                 <div class="mt-4">
                     <x-input-label for="titulo" :value="__('Titulo do Item')" />
-                    <x-text-input id="titulo" class="block mt-1 w-full" type="text" name="titulo" :value="old('titulo')"
-                        required autofocus autocomplete="titulo" />
+                    <x-text-input id="titulo" class="block mt-1 w-full" type="text" name="titulo" :value="old('titulo')" required autofocus autocomplete="titulo" />
                     <x-input-error :messages="$errors->get('titulo')" class="mt-2" />
                 </div>
 
@@ -111,8 +102,7 @@
                     <x-input-label for="descricao" :value="__('Descrição do Item')" />
                     <textarea id="descricao" name="descricao" rows="4" class="block mt-1 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border
                         border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600
-                        dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Digite uma descrição..."></textarea>
+                        dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Digite uma descrição..."></textarea>
 
                     <!--<x-text-input id="descricao" class="block mt-1 w-full" type="text" name="descricao" :value="old('descricao')"
                         required autofocus autocomplete="descricao" />-->
@@ -127,7 +117,7 @@
 
                 </div>
 
-                <button class="btn" type="submit" onclick="enviar_item()">Adicionar</button>
+                <button class="btn" type="submit" onclick="adicionar_item()">Adicionar</button>
             </form>
             <!-- botão para adiconar item a coluna do backlog -->
             <!--<a href="#" class="footer-btn"> Adicionar </a>-->
@@ -156,8 +146,7 @@
 
                     </select>-->
 
-                    <x-text-input id="descricao" class="block mt-1 w-full" type="text" name="descricao" :value="old('descricao')"
-                        required autofocus autocomplete="descricao" />
+                    <x-text-input id="descricao" class="block mt-1 w-full" type="text" name="descricao" :value="old('descricao')" required autofocus autocomplete="descricao" />
                     <x-input-error :messages="$errors->get('descricao')" class="mt-2" />
                 </div>
 
@@ -166,8 +155,7 @@
                     <x-input-label for="comentario" :value="__('Comentário da Tarefa')" />
                     <textarea id="comentario" name="comentario" rows="4" class="block mt-1 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border
                         border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600
-                        dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Digite uma descrição..."></textarea>
+                        dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Digite uma descrição..."></textarea>
 
                     <!--<x-text-input id="descricao" class="block mt-1 w-full" type="text" name="descricao" :value="old('descricao')"
                         required autofocus autocomplete="descricao" />-->
@@ -215,7 +203,7 @@
                     </x-primary-button>
 
                 </div>
-                <button class="btn" type="submit" onclick="enviar_task()"> Adicionar </button>
+                <button class="btn" type="submit" onclick="adicionar_tarefa()"> Adicionar </button>
             </form>
             <!-- botão para adicionar tarefa ao dashboard -->
             <!--<a href="#" class="footer-btn"> Adicionar </a>-->
@@ -226,11 +214,11 @@
     </div>
     <!------- final do modal adicionar tarefa ------->
 
-    <script src="js/actions_items.js"></script>
-    <script src="js/actions_tarefas.js"></script>
+    <script src="https://code.jquery.com/jquery-git.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/scripts_js.js"></script>
+    <script src="js/scripts1.js"></script>
+    <script src="js/scripts2.js"></script>
+    
 
 </x-app-layout>
-
-
-
-
