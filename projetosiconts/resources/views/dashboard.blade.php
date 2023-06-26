@@ -22,13 +22,8 @@
                                 <!-- botão para acionar a tela modal de addItem -->
                                 <a href="#modal-AddItem" class="addItem">Adicionar Item</a>
                             </div>
-<<<<<<< HEAD
                             <div id="backlog">
                                 <!-- Cartões de itens do backlog -->
-=======
-                            <div class="dropZone" id="backlog">
-                                <!-- ------- Coluna de itens do backlog -------- -->
->>>>>>> a5845bd748338a3d0606f61dfa8ae3a1685ca468
 
 
                             </div>
@@ -39,18 +34,9 @@
                                 <!-- botão para acionar a tela modal de addTarefa -->
                                 <a href="#modal-AddTarefa" class="addTarefa">Adicionar Tarefa</a>
                             </div>
-<<<<<<< HEAD
                             <div id="fazer">
                                 <!-- Cartões de tarefas a fazer-->
 
-=======
-                            <div class="dropZone" id="todo">
-                                <!-- Coluna de tarefas a fazer-->
-                                <div class="card" draggable="true">
-                                    <div class="status todo"></div>
-                                    <div class="content"></div>
-                                </div>
->>>>>>> a5845bd748338a3d0606f61dfa8ae3a1685ca468
                             </div>
                         </div>
                         <!--  ----- Coluna de tarefas sendo feitas ------ -->
