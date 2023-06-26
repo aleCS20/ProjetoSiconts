@@ -22,8 +22,13 @@
                                 <!-- botão para acionar a tela modal de addItem -->
                                 <a href="#modal-AddItem" class="addItem">Adicionar Item</a>
                             </div>
+<<<<<<< HEAD
                             <div id="backlog">
                                 <!-- Cartões de itens do backlog -->
+=======
+                            <div class="dropZone" id="backlog">
+                                <!-- ------- Coluna de itens do backlog -------- -->
+>>>>>>> a5845bd748338a3d0606f61dfa8ae3a1685ca468
 
 
                             </div>
@@ -34,12 +39,21 @@
                                 <!-- botão para acionar a tela modal de addTarefa -->
                                 <a href="#modal-AddTarefa" class="addTarefa">Adicionar Tarefa</a>
                             </div>
+<<<<<<< HEAD
                             <div id="fazer">
                                 <!-- Cartões de tarefas a fazer-->
 
+=======
+                            <div class="dropZone" id="todo">
+                                <!-- Coluna de tarefas a fazer-->
+                                <div class="card" draggable="true">
+                                    <div class="status todo"></div>
+                                    <div class="content"></div>
+                                </div>
+>>>>>>> a5845bd748338a3d0606f61dfa8ae3a1685ca468
                             </div>
                         </div>
-                        <!-- Quadro de tarefas sendo feitas -->
+                        <!--  ----- Coluna de tarefas sendo feitas ------ -->
                         <div class="board">
                             <h2>FAZENDO</h2>
                             <div id="fazendo">
@@ -47,7 +61,7 @@
 
                             </div>
                         </div>
-                        <!-- Quadro de tarefas já feitas -->
+                        <!-- ----- Coluna de tarefas já feitas ----- -->
                         <div class="board">
                             <h2>PRONTO!</h2>
                             <div id="wrapper">
@@ -61,13 +75,13 @@
                         </div>
                     </div>
 
-                    <!-- fim do quadro kanban -->
+                    <!-- ----- fim do quadro kanban ----- -->
 
                 </div>
             </div>
         </div>
     </div>
-    <!-------- tela modal adicionar item -------->
+    <!-- -------------------------- tela modal adicionar item ---------------------------->
     <div id="modal-AddItem" class="modal">
         <div class="conteudo">
             <h1 class="titulo">ADICIONAR ITEM</h1>
@@ -127,9 +141,9 @@
         </div>
     </div>
 
-    <!------- final do modal adicionar item ------->
+    <!-- ----------------------- final do modal adicionar item ------------------------ -->
     <!-- ######################################################################################################### -->
-    <!------- tela modal adicionar tarefa ------->
+    <!-- ------------------------------ tela modal adicionar tarefa ---------------------- -->
     <div id="modal-AddTarefa" class="modal">
         <div class="conteudo">
             <h1 class="titulo">ADICIONAR TAREFA</h1>
@@ -212,7 +226,7 @@
 
         </div>
     </div>
-    <!------- final do modal adicionar tarefa ------->
+    <!-- ----------------------------- final do modal adicionar tarefa -------------- -->
 
     <script src="https://code.jquery.com/jquery-git.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
