@@ -1,5 +1,3 @@
-//script para adicionar itens e tarefas conforme a necessidade
-
 /* ---------- função para adicionar itens na coluna backlog ---------- */
 function adicionar_item() {
     //variáveis para recuperar a id do formulário e o conteúdo da descrição
@@ -32,7 +30,6 @@ function adicionar_item() {
 }
 
 /* ---------- função para adicionar cartões de tarefas ---------- */
-
 function adicionar_tarefa() {
     const formName = document.getElementById('addTarefa');
     const comentario = document.getElementById("comentario");
@@ -57,6 +54,5 @@ function adicionar_tarefa() {
 		</div>`;
         fazer.appendChild(novo);
     }
-
 
 }
